@@ -1,0 +1,84 @@
+/* Reset default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background: black;
+    color: white;
+    font-family: sans-serif;
+    overflow: hidden;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: black;
+    z-index: 1000;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+  }
+  
+  nav li {
+    position: relative;
+  }
+  
+  nav button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  nav ul li ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #111;
+    display: none;
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  nav ul li:hover ul {
+    display: flex;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 40px;
+    padding: 140px 40px 40px 40px;
+    width: 100vw;
+    height: 100vh;
+    overflow: scroll;
+  }
+  
+  .item {
+    background: #111;
+    border-radius: 16px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+  }
+  
+  .item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 255, 0, 0.3);
+  }
+  
